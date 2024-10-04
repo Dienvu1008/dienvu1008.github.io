@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('title').innerText = 'Welcome to My GitHub Page';
+                document.getElementById('description').innerText = 'This is a simple page to host my app-ads.txt file.';
+                document.getElementById('readme-link').innerText = 'Go to README.md';
+            } else if (lang === 'vi') {
+                document.getElementById('title').innerText = 'Chào mừng đến với trang GitHub của tôi';
+                document.getElementById('description').innerText = 'Đây là một trang đơn giản để lưu trữ tệp app-ads.txt của tôi.';
+                document.getElementById('readme-link').innerText = 'Đi đến README.md';
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page</h1>
-    <p>This is a simple page to host my app-ads.txt file.</p>
-    <p><a href="README.md">Go to README.md</a></p>
+    <h1 id="title">Welcome to My GitHub Page</h1>
+    <p id="description">This is a simple page to host my app-ads.txt file.</p>
+    <p><a id="readme-link" href="README.md">Go to README.md</a></p>
+    <button onclick="setLanguage('en')">Eng</button>
+    <button onclick="setLanguage('vi')">Vi</button>
 </body>
 </html>
