@@ -22,6 +22,16 @@
                 document.getElementById('readme-link').innerText = 'Gehe zu README.md';
                 document.getElementById('language-button').innerText = 'Deutsch';
             }
+            document.getElementById('dropdown').style.display = 'none';
+        }
+
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === 'none') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
         }
     </script>
 </head>
@@ -37,16 +47,7 @@
             <p onclick="setLanguage('de')">Deutsch</p>
         </div>
     </div>
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.getElementById('dropdown');
-            if (dropdown.style.display === 'none') {
-                dropdown.style.display = 'block';
-            } else {
-                dropdown.style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
+
 
